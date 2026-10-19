@@ -1,3 +1,8 @@
-theme: jekyll-theme-cayman # do not change this line
-
-description: (UPDATE IN _config.yml) Full Name
+theme: jekyll-theme-cayman
+title: Yoonha Kim
+description: Data Science and Statistics at UC Berkeley
+url: https://yhkimslv.github.io
+baseurl: ""
+show_downloads: false
+exclude:
+  - README.md

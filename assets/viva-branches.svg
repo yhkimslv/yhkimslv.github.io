@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="490" viewBox="0 0 800 490" role="img" aria-labelledby="title desc">
+  <title id="title">VIVA: a branching tree of work and ideas</title>
+  <desc id="desc">A Git-inspired commit graph grows from a shared starting point into two branches. One branch rejoins the main path at a merge, while another continues independently. Labels identify work, branch, and merge.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#244e3b" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="490" fill="#f6f4ed"/>
+  <rect width="800" height="490" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#18251e">
+    <text x="38" y="53" font-size="11" letter-spacing="2.1">VIVA / VERSIONED IDEAS</text>
+    <text x="38" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="34">Room for another direction.</text>
+    <text x="38" y="126" font-size="13" fill="#647165">Work unfolds. Ideas diverge. The useful parts come together.</text>
+
+    <!-- A commit DAG: left-to-right time, one completed merge, one open branch. -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M71 290H717" stroke="#244e3b"/>
+      <path d="M202 290C236 290 236 211 276 211H395C434 211 438 290 480 290" stroke="#c35d3b"/>
+      <path d="M343 290C379 290 383 354 421 354H622" stroke="#244e3b" stroke-opacity=".55"/>
+    </g>
+
+    <g fill="#f6f4ed" stroke="#244e3b" stroke-width="2.5">
+      <circle cx="71" cy="290" r="7"/>
+      <circle cx="137" cy="290" r="7"/>
+      <circle cx="202" cy="290" r="7"/>
+      <circle cx="276" cy="290" r="7"/>
+      <circle cx="343" cy="290" r="7"/>
+      <circle cx="548" cy="290" r="7"/>
+      <circle cx="618" cy="290" r="7"/>
+    </g>
+    <g fill="#f6f4ed" stroke="#c35d3b" stroke-width="2.5">
+      <circle cx="276" cy="211" r="7"/>
+      <circle cx="336" cy="211" r="7"/>
+      <circle cx="395" cy="211" r="7"/>
+    </g>
+    <g fill="#f6f4ed" stroke="#6e8773" stroke-width="2.5">
+      <circle cx="421" cy="354" r="7"/>
+      <circle cx="489" cy="354" r="7"/>
+      <circle cx="557" cy="354" r="7"/>
+    </g>
+    <circle cx="480" cy="290" r="12" fill="#f6f4ed" stroke="#244e3b" stroke-width="2.5"/>
+    <circle cx="480" cy="290" r="4" fill="#c35d3b"/>
+    <circle cx="717" cy="290" r="7" fill="#244e3b"/>
+    <circle cx="622" cy="354" r="7" fill="#f6f4ed" stroke="#6e8773" stroke-width="2.5"/>
+    <path d="M635 354h17" stroke="#6e8773" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 5"/>
+
+    <g font-size="12">
+      <path d="M137 270v-32" stroke="#244e3b" stroke-opacity=".35"/>
+      <text x="137" y="222" text-anchor="middle" fill="#244e3b">work</text>
+      <path d="M336 191v-24" stroke="#c35d3b" stroke-opacity=".6"/>
+      <text x="336" y="158" text-anchor="middle" fill="#c35d3b">branch</text>
+      <path d="M480 270v-32" stroke="#244e3b" stroke-opacity=".35"/>
+      <text x="480" y="222" text-anchor="middle" fill="#244e3b">merge</text>
+    </g>
+    <g font-size="10" fill="#647165" letter-spacing=".9">
+      <text x="71" y="322">START</text>
+      <text x="717" y="322" text-anchor="end">CONTINUE</text>
+      <text x="681" y="358" letter-spacing="0">explore</text>
+    </g>
+
+    <path d="M38 403h724" stroke="#244e3b" stroke-opacity=".19"/>
+    <g font-size="11" fill="#647165">
+      <circle cx="43" cy="438" r="4" fill="#244e3b"/>
+      <text x="56" y="442">Shared progress</text>
+      <circle cx="218" cy="438" r="4" fill="#c35d3b"/>
+      <text x="231" y="442">A new direction</text>
+      <text x="762" y="442" text-anchor="end" font-size="10" letter-spacing="1.2">A CONCEPTUAL COMMIT TREE</text>
+    </g>
+  </g>
+</svg>
