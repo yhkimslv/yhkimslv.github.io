@@ -55,8 +55,8 @@ courseFilters.forEach(button => {
       groups++;
     });
     courseStatus.textContent = course === 'all'
-      ? `${visible} projects across ${groups} courses. Open a course to explore.`
-      : `${visible} ${visible === 1 ? 'project' : 'projects'} in ${button.childNodes[0].textContent.trim()}.`;
+      ? `${visible} coursework entries across ${groups} courses. Open a course to explore.`
+      : `${visible} coursework ${visible === 1 ? 'entry' : 'entries'} in ${button.childNodes[0].textContent.trim()}.`;
     syncCourseExpand();
   });
 });

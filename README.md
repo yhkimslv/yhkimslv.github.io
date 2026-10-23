@@ -14,10 +14,11 @@ Personal portfolio for a UC Berkeley Data Science and Statistics student, with a
 
 ## Coursework archive
 
-20 projects across seven UC Berkeley courses are listed in the [classroom section](https://yhkimslv.github.io/#classroom):
+24 projects and analyses across eight UC Berkeley courses are listed in the [classroom section](https://yhkimslv.github.io/#classroom):
 
 - DATA 100: Cook County housing exploration (A1), housing price prediction (A2), spam/ham classification (B1), and an expanded spam classifier (B2).
 - STAT 133: NBA salary scrollytelling, bicyclist collision dashboard, crash map, and State of the Union text analysis.
+- STAT 135: survey sampling, Gamma estimation and bootstrap, bearing failure-time tests, and body temperature/heart-rate regression (completed homework analyses).
 - CS 61B: Haunted Room Escape and NGordnet / WordNet Explorer.
 - CS 188: search, multi-agent search, reinforcement learning, probabilistic tracking, and neural networks/transformers.
 - CS 168: traceroute, distance-vector routing, and simulated TCP transport.
