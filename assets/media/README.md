@@ -19,13 +19,15 @@ All displayed project media comes from real app interfaces or the project's own 
 
 ## VIVA
 
-- `viva-demo.gif`: an actual English-language VIVA walkthrough captured from the unmodified desktop app with an isolated demo profile and sample Git repository.
+- `viva-demo-clean.gif`: an actual English-language VIVA walkthrough captured from the unmodified desktop app with an isolated demo profile and sample Git repository.
 - The sequence creates a feature branch, stages two changed files, enters a commit message, saves a local Git commit, and switches to the main branch.
-- `viva-poster.webp`: the staged files and commit message screen.
+- `viva-poster-clean.webp`: the staged files and commit message screen.
+- Recaptured on October 22, 2026. The pointer was parked on the native window titlebar before each capture, and the titlebar was excluded from the final frame. No recording controls or pointer are included; the app content is unchanged.
+- Eight frames, 1200 × 768, 14.12 seconds, looping. The former GIF and poster were replaced with new filenames so cached previews update.
 - The app was not connected to GitHub or an AI provider. All project files are demonstration data.
 - The earlier `viva-clone.jpg` screenshot is retained as an unused reference; the displayed preview uses the English GIF.
 - Project: https://github.com/yhkimslv/viva
-- Source revision: `261a86b4c3289cc2d31d17a6b45e9e18e2d90658`. The isolated sample repository records the demonstrated commit as `fb0b615d092f846cb0961e20d802e3383711b048`.
+- Source revision: `261a86b4c3289cc2d31d17a6b45e9e18e2d90658`. The isolated sample repository records the demonstrated commit as `30e1ad9e7f704f6e1cd0c56517f98b4e29da8a64`.
 - The original MIT license is retained in `VIVA-LICENSE.txt`.
 
 ## My Ledger
