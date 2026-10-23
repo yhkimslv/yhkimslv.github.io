@@ -26,6 +26,49 @@ filters.forEach(button => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const courseFilters = document.querySelectorAll('[data-course-filter]');
+const courseGroups = [...document.querySelectorAll('[data-course]')];
+const courseStatus = document.getElementById('course-status');
+const courseExpand = document.querySelector('.course-expand');
+
+function syncCourseExpand() {
+  const visibleGroups = courseGroups.filter(group => !group.hidden);
+  const expanded = visibleGroups.every(group => group.open);
+  courseExpand.innerHTML = `${expanded ? 'Collapse' : 'Expand'} all courses <span aria-hidden="true">${expanded ? '−' : '+'}</span>`;
+}
+
+courseFilters.forEach(button => {
+  button.addEventListener('click', () => {
+    const course = button.dataset.courseFilter;
+    courseFilters.forEach(filter => {
+      const selected = filter === button;
+      filter.classList.toggle('active', selected);
+      filter.setAttribute('aria-pressed', String(selected));
+    });
+    let visible = 0;
+    let groups = 0;
+    courseGroups.forEach(group => {
+      group.hidden = course !== 'all' && group.dataset.course !== course;
+      if (group.hidden) return;
+      if (course !== 'all') group.open = true;
+      visible += group.querySelectorAll('.course-card').length;
+      groups++;
+    });
+    courseStatus.textContent = course === 'all'
+      ? `${visible} projects across ${groups} courses. Open a course to explore.`
+      : `${visible} ${visible === 1 ? 'project' : 'projects'} in ${button.childNodes[0].textContent.trim()}.`;
+    syncCourseExpand();
+  });
+});
+
+courseGroups.forEach(group => group.addEventListener('toggle', syncCourseExpand));
+courseExpand.addEventListener('click', () => {
+  const visibleGroups = courseGroups.filter(group => !group.hidden);
+  const expand = !visibleGroups.every(group => group.open);
+  visibleGroups.forEach(group => { group.open = expand; });
+  syncCourseExpand();
+});
+
 const demoDialog = document.getElementById('demo-dialog');
 const demoCanvas = document.getElementById('demo-canvas');
 const demoTitle = document.getElementById('demo-title');

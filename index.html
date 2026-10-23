@@ -14,6 +14,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="coursework.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -22,6 +23,7 @@
     <a class="wordmark" href="#home" aria-label="Yoonha Kim home">yk<span class="wordmark-dot">.</span></a>
     <nav aria-label="Main navigation">
       <a href="#work">Work</a>
+      <a href="#classroom">Coursework</a>
       <a href="#about">About</a>
       <a href="#contact">Connect <span aria-hidden="true">↗</span></a>
     </nav>
@@ -37,7 +39,7 @@
         <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
       </div>
       <aside class="field-notes" aria-label="Areas of focus">
-        <div class="notes-heading"><span>FIELD NOTES</span><span>001—006</span></div>
+        <div class="notes-heading"><span>FIELD NOTES</span><span>ALWAYS EXPLORING</span></div>
         <div class="notes-graphic" aria-hidden="true">
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
           <div class="orbit orbit-three"></div><span class="orbit-center">yk</span>
@@ -55,13 +57,13 @@
         <div class="section-heading"><div><p class="eyebrow">01 / BUILDING & EXPERIMENTING</p><h2 id="work-title">Selected work<span class="accent">.</span></h2></div><p>From recognizing Braille to making <br>Git a little more approachable.</p></div>
         <div class="work-toolbar">
           <div class="filters" role="group" aria-label="Filter projects">
-            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span>04</span></button>
+            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span>05</span></button>
             <button type="button" class="filter" data-filter="ml" aria-pressed="false">Machine learning & AI</button>
             <button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button>
           </div>
           <span class="toolbar-note" aria-hidden="true">IDEA → EXPERIMENT → APPLICATION</span>
         </div>
-        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 4 projects.</p>
+        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 5 projects.</p>
         <div class="project-grid">
           <article class="project featured" data-category="ml" aria-labelledby="braille-title">
             <div class="feature-art media-feature">
@@ -118,20 +120,203 @@
             </figure>
             <div class="project-body"><p class="project-context">INDEPENDENT PROJECT</p><h3 id="ledger-title">Gagyebu</h3><p>Personal and shared finance apps for keeping track of daily spending, budgets, and who owes what.</p><p class="contribution"><strong>My focus</strong> Independently designing and developing My Ledger and Our Ledger across web and desktop.</p><ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>Electron</li><li>Supabase</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/gagyebu">View code <span aria-hidden="true">↗</span></a><a href="https://piggybox.netlify.app">My Ledger <span aria-hidden="true">↗</span></a><a href="https://piggyduo.netlify.app">Our Ledger <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>My Ledger supports income, expenses, budgets, recurring payments, savings goals, and payment balances. Our Ledger supports configurable expense splits and settlement balances.</p><p>Both support offline use, optional synchronization through a user-configured Supabase project, and English and Korean interfaces.</p><a href="https://github.com/yhkimslv/gagyebu-releases/releases">Desktop downloads ↗</a></div></details></div>
           </article>
+
+          <article class="project lab-project" data-category="software" aria-labelledby="repoknow-title">
+            <div><p class="project-context">INDEPENDENT EXPLORATION · CLI PROTOTYPE</p><h3 id="repoknow-title">Code Compass<br><em>/ RepoKnow</em></h3></div>
+            <div class="lab-project-copy"><p>A repository analysis CLI combining Git history with CodeQL dependency graphs to surface file ownership, change hotspots, and direct dependency impact.</p><p class="contribution"><strong>My focus</strong> Connecting history and dependency signals into file-level scores and one-hop impact reports.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>CodeQL</li><li>PyDriller</li><li>CLI</li></ul></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="academic-section section-pad" aria-labelledby="academic-title">
-      <div class="container academic-layout"><div class="academic-intro"><p class="eyebrow">02 / IN THE CLASSROOM</p><h2 id="academic-title">Learning by <br><em>asking why.</em></h2><p>Coursework in prediction, visualization, and reproducible analysis at UC Berkeley.</p></div><div class="academic-list">
-        <article><div class="academic-number">05</div><div><p class="project-context">DATA 144 · UC BERKELEY</p><h3>Titanic Survival Prediction</h3><p>Exploring how passenger attributes and engineered features help predict survival. Built preprocessing workflows, compared classifiers with stratified cross-validation, and explored ensemble methods.</p><ul class="tags"><li>pandas</li><li>scikit-learn</li><li>Model evaluation</li></ul></div></article>
-        <article><div class="academic-number">06</div><div><p class="project-context">STAT 159 · UC BERKELEY</p><h3>NASA Global Temperature Visualization</h3><p>An individual analysis of NASA GISTEMP data, using visualization and written interpretation to explore global temperature trends. Organized data, code, and figures for reproducible work.</p><ul class="tags"><li>Python</li><li>Matplotlib</li><li>Reproducible analysis</li></ul></div></article>
-      </div></div>
+    <section class="academic-section section-pad" id="classroom" aria-labelledby="academic-title">
+      <div class="container">
+        <div class="classroom-heading">
+          <div><p class="eyebrow">02 / IN THE CLASSROOM</p><h2 id="academic-title">Learning by<br><em>asking why.</em></h2></div>
+          <div class="classroom-intro"><span class="classroom-total">20 projects · 7 Berkeley courses</span><p>From the first question to the final model, map, or working system. A closer look at the projects behind my coursework.</p></div>
+        </div>
+        <div class="course-toolbar">
+          <div class="course-filters" role="group" aria-label="Browse coursework by course">
+            <button class="course-filter active" type="button" data-course-filter="all" aria-pressed="true">All courses <span>20</span></button>
+            <button class="course-filter" type="button" data-course-filter="data100" aria-pressed="false">DATA 100 <span>4</span></button>
+            <button class="course-filter" type="button" data-course-filter="stat133" aria-pressed="false">STAT 133 <span>4</span></button>
+            <button class="course-filter" type="button" data-course-filter="cs61b" aria-pressed="false">CS 61B <span>2</span></button>
+            <button class="course-filter" type="button" data-course-filter="cs188" aria-pressed="false">CS 188 <span>5</span></button>
+            <button class="course-filter" type="button" data-course-filter="cs168" aria-pressed="false">CS 168 <span>3</span></button>
+            <button class="course-filter" type="button" data-course-filter="data144" aria-pressed="false">DATA 144 <span>1</span></button>
+            <button class="course-filter" type="button" data-course-filter="dighum100" aria-pressed="false">DIGHUM 100 <span>1</span></button>
+          </div>
+          <div class="course-browser-note"><p id="course-status" aria-live="polite">20 projects across 7 courses. Open a course to explore.</p><button class="course-expand" type="button" aria-controls="course-archive">Expand all courses <span aria-hidden="true">+</span></button></div>
+        </div>
+        <div id="course-archive">
+          <details class="course-group" data-course="data100" id="course-data100" open>
+            <summary><span class="course-heading"><span class="course-code">DATA 100</span><span class="course-name">Principles &amp; Techniques of Data Science</span><span class="course-count">4 projects</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <p class="course-group-note">Four connected project phases: explore and model housing prices, then build and evaluate email classifiers. The figures below are saved outputs from my submitted notebooks.</p>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">PROJECT A1 · COLLABORATIVE COURSEWORK</p>
+                <h3>Exploring Cook County Housing</h3>
+                <p>Explored home sales through data cleaning, log transformations, outlier analysis, regex-based feature extraction, and neighborhood visualizations.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>pandas</li><li>Exploratory analysis</li><li>Feature engineering</li></ul>
+                <ol class="course-methods"><li>Inspect data quality</li><li>Explore transformations</li><li>Compare neighborhoods</li></ol>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT A2 · COLLABORATIVE COURSEWORK</p>
+                <h3>Predicting Cook County Housing Prices</h3>
+                <p>Built feature-engineering pipelines and linear regression models for home prices, compared models with four-fold cross-validation, and examined residuals in log-price space.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>scikit-learn</li><li>Linear regression</li><li>Cross-validation</li></ul>
+                <figure class="course-figure"><button class="course-plot" type="button" data-demo-type="image" data-demo-src="assets/coursework/data100-housing-residuals.png" data-demo-title="Residuals in log-price space" data-demo-description="An actual saved output from my submitted DATA 100 Project A2 notebook. Both the observed prices and residuals are in log-price space." aria-label="Enlarge residuals in log-price space"><img src="assets/coursework/data100-housing-residuals.png" width="1004" height="781" loading="lazy" alt="Saved scatter plot of residuals against observed log sale prices"></button><figcaption><span>Residuals in log-price space</span><span>View figure ↗</span></figcaption></figure>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT B1 · COURSE PROJECT</p>
+                <h3>Spam &amp; Ham Classification</h3>
+                <p>Implemented keyword indicators for email classification, trained logistic regression, and compared precision and recall against a majority-class baseline.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Logistic regression</li><li>Precision &amp; recall</li></ul>
+                <figure class="course-figure"><button class="course-plot" type="button" data-demo-type="image" data-demo-src="assets/coursework/data100-spam-keywords.png" data-demo-title="Keyword frequencies: spam vs. ham" data-demo-description="An actual saved output from my submitted DATA 100 Project B1 notebook, comparing the proportion of spam and ham messages containing selected words." aria-label="Enlarge keyword frequencies: spam vs. ham"><img src="assets/coursework/data100-spam-keywords.png" width="766" height="566" loading="lazy" alt="Saved bar chart comparing keyword frequencies in spam and ham emails"></button><figcaption><span>Keyword frequencies: spam vs. ham</span><span>View figure ↗</span></figcaption></figure>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT B2 · COURSE PROJECT</p>
+                <h3>Building a Better Spam Classifier</h3>
+                <p>Expanded keyword features, evaluated logistic regression with ten-fold cross-validation and ROC analysis, and investigated ambiguous labels and feature-level interpretability.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Feature engineering</li><li>Model evaluation</li><li>Interpretability</li></ul>
+                <p class="course-result"><strong>90.99%</strong> mean ten-fold cross-validation accuracy</p>
+                <figure class="course-figure"><button class="course-plot" type="button" data-demo-type="image" data-demo-src="assets/coursework/data100-spam-features.png" data-demo-title="Exploratory feature correlations" data-demo-description="An actual saved exploratory heatmap from my submitted DATA 100 Project B2 notebook. It includes candidate features explored during analysis; the final classifier uses the expanded keyword indicators. The reported 90.99% is mean cross-validation accuracy, not a hidden-test result." aria-label="Enlarge exploratory feature correlations"><img src="assets/coursework/data100-spam-features.png" width="718" height="365" loading="lazy" alt="Saved correlation heatmap of the spam label and exploratory email features"></button><figcaption><span>Exploratory feature correlations</span><span>View figure ↗</span></figcaption></figure>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="stat133" id="course-stat133">
+            <summary><span class="course-heading"><span class="course-code">STAT 133</span><span class="course-name">Computing &amp; Data Visualization</span><span class="course-count">4 projects</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">PROJECT 3 · DATA STORY</p>
+                <h3>NBA Salary Scrollytelling</h3>
+                <p>Created a scroll-driven data story exploring NBA player salaries, experience, positions, and team payrolls in the 2024–25 season.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>R</li><li>ggplot2</li><li>Quarto</li><li>Closeread</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT 4 · INTERACTIVE DASHBOARD</p>
+                <h3>California Bicyclist Collisions</h3>
+                <p>Built an interactive dashboard comparing fatal and nonfatal bicycle collisions by day, hour, collision type, and year across 2014–2023.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>R</li><li>Plotly</li><li>Quarto</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT 5 · REACTIVE DASHBOARD</p>
+                <h3>California Crash Map</h3>
+                <p>Built a reactive dashboard for exploring 2019 crash locations with county, date, and collision-type filters, severity colors, and time-based trends.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>R</li><li>Shiny</li><li>Leaflet</li><li>Plotly</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">PROJECT 6 · TEXT ANALYSIS</p>
+                <h3>State of the Union Text Analysis</h3>
+                <p>Analyzed 2001–2021 presidential speeches through word frequencies, bigrams, keyword trends, and Bing and NRC sentiment lexicons, presented in an interactive Quarto site.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>R</li><li>tidytext</li><li>Plotly</li><li>Quarto</li></ul>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="cs61b" id="course-cs61b">
+            <summary><span class="course-heading"><span class="course-code">CS 61B</span><span class="course-name">Data Structures &amp; Software Projects</span><span class="course-count">2 projects</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">COURSE TEAM PROJECT · JAVA GAME</p>
+                <h3>Haunted Room Escape</h3>
+                <p>Built a seeded 2D exploration game with connected room generation, BFS mouse navigation, undo and redo, and persistent save/load.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Java</li><li>World generation</li><li>BFS</li><li>Persistence</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · SEMANTIC SEARCH</p>
+                <h3>NGordnet / WordNet Explorer</h3>
+                <p>Built a Java semantic explorer combining WordNet graph traversal, common-hyponym queries, and historical NGram frequencies to rank related words.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Java</li><li>Graph traversal</li><li>WordNet</li><li>NGrams</li></ul>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="cs188" id="course-cs188">
+            <summary><span class="course-heading"><span class="course-code">CS 188</span><span class="course-name">Artificial Intelligence</span><span class="course-count">5 projects</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · SEARCH</p>
+                <h3>Pacman Search</h3>
+                <p>Implemented depth-first, breadth-first, uniform-cost, and A* search, with state representations and heuristics for corners and food collection.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Search algorithms</li><li>Heuristics</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · ADVERSARIAL SEARCH</p>
+                <h3>Multi-Agent Pacman</h3>
+                <p>Implemented minimax, alpha-beta pruning, and expectimax agents with game-state evaluation functions.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Minimax</li><li>Expectimax</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · LEARNING AGENTS</p>
+                <h3>Reinforcement Learning</h3>
+                <p>Implemented value iteration, prioritized sweeping, epsilon-greedy Q-learning, and feature-based approximate Q-learning.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Q-learning</li><li>Markov decision processes</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · INFERENCE</p>
+                <h3>Probabilistic Ghost Tracking</h3>
+                <p>Implemented Bayesian factor operations and variable elimination, exact belief updates, and particle filtering to track hidden states from noisy observations.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Bayesian inference</li><li>Particle filters</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · MACHINE LEARNING</p>
+                <h3>Neural Networks &amp; Transformers</h3>
+                <p>Implemented perceptron and regression models, digit classifiers and convolution, recurrent language identification, and causal attention in a character-level transformer.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>PyTorch</li><li>Neural networks</li><li>Attention</li></ul>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="cs168" id="course-cs168">
+            <summary><span class="course-heading"><span class="course-code">CS 168</span><span class="course-name">Computer Networks</span><span class="course-count">3 projects</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · ROUTE DISCOVERY</p>
+                <h3>UDP Traceroute</h3>
+                <p>Implemented IPv4, ICMP, and UDP parsing plus TTL-based route discovery, validating responses and filtering duplicate or unrelated replies.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Network protocols</li><li>Packet parsing</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · ROUTING SIMULATOR</p>
+                <h3>Distance-Vector Router</h3>
+                <p>Implemented forwarding, route advertisements, expiration, split horizon, poison reverse, and incremental updates for changing network links in a simulator.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>Routing</li><li>Network simulation</li></ul>
+              </article>
+              <article class="course-card">
+                <p class="project-context">COURSE PROJECT · TRANSPORT SIMULATOR</p>
+                <h3>TCP Transport</h3>
+                <p>Implemented connection setup and teardown, sequence and ACK handling, receive windows, retransmissions, and adaptive retransmission timeouts in a simulated TCP socket.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Python</li><li>TCP</li><li>Flow control</li><li>Retransmission</li></ul>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="data144" id="course-data144">
+            <summary><span class="course-heading"><span class="course-code">DATA 144</span><span class="course-name">Data Mining &amp; Analytics</span><span class="course-count">1 project</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">COURSE MODELING LAB · CLASSIFICATION</p>
+                <h3>Titanic Survival Prediction</h3>
+                <p>Engineered passenger features, built imputation and encoding pipelines, and compared classifiers and a voting ensemble with five-fold cross-validation.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>pandas</li><li>scikit-learn</li><li>Ensembles</li><li>Model evaluation</li></ul>
+              </article>
+            </div>
+          </details>
+          <details class="course-group" data-course="dighum100" id="course-dighum100">
+            <summary><span class="course-heading"><span class="course-code">DIGHUM 100</span><span class="course-name">Digital Humanities</span><span class="course-count">1 project</span></span><span class="course-disclosure" aria-hidden="true">+</span></summary>
+            <div class="course-grid">
+              <article class="course-card">
+                <p class="project-context">COLLABORATIVE STUDY · ANALYSIS &amp; NARRATIVE LEAD</p>
+                <h3>Did AI Take the Jobs?</h3>
+                <p>Studied AI exposure and employment projections, examining unequal impacts and the limits of occupational data. My role centered on data-driven written analysis, interpreting visualizations, and communicating limitations.</p>
+                <ul class="tags" aria-label="Methods and tools"><li>Data interpretation</li><li>Research writing</li><li>AI &amp; employment</li></ul>
+              </article>
+            </div>
+          </details>
+        </div>
+      </div>
     </section>
 
     <section class="about-section section-pad container" id="about" aria-labelledby="about-title">
       <div class="about-copy"><p class="eyebrow">03 / A LITTLE ABOUT ME</p><h2 id="about-title">The person <br>behind the projects<span class="accent">.</span></h2><p class="about-lead">I’m a UC Berkeley student double majoring in Data Science and Statistics, with a domain emphasis in Robotics.</p><p>I like following an idea all the way through: understanding the problem, building something, and looking closely at where it works and where it falls short.</p><p>That curiosity has taken me from computer vision and language models to Git tools and personal finance apps. Across these projects, I care about clear evaluation and software that makes sense to the person using it.</p><a class="text-link" href="https://github.com/yhkimslv">More of my work on GitHub <span aria-hidden="true">↗</span></a></div>
-      <div class="toolbox"><p class="eyebrow">MY TOOLBOX</p><dl><div><dt>Languages</dt><dd>Python · SQL · JavaScript · TypeScript</dd></div><div><dt>Data & machine learning</dt><dd>pandas · NumPy · scikit-learn · PyTorch · Computer vision · Model evaluation</dd></div><div><dt>AI applications</dt><dd>LLM APIs · Prompt design · Structured outputs · Validation workflows</dd></div><div><dt>Building & shipping</dt><dd>React · Electron · Streamlit · Supabase · Git · Jupyter</dd></div></dl><div class="toolbox-note"><span aria-hidden="true">↳</span><p>Always making room <br>for the next thing to learn.</p></div></div>
+      <div class="toolbox"><p class="eyebrow">MY TOOLBOX</p><dl><div><dt>Languages</dt><dd>Python · R · Java · SQL · JavaScript · TypeScript</dd></div><div><dt>Data & machine learning</dt><dd>pandas · NumPy · scikit-learn · PyTorch · Computer vision · Model evaluation</dd></div><div><dt>AI applications</dt><dd>LLM APIs · Prompt design · Structured outputs · Validation workflows</dd></div><div><dt>Building & shipping</dt><dd>React · Electron · Streamlit · Supabase · Git · Jupyter · Quarto · Shiny</dd></div></dl><div class="toolbox-note"><span aria-hidden="true">↳</span><p>Always making room <br>for the next thing to learn.</p></div></div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><p class="eyebrow">04 / WHAT’S NEXT</p><h2 id="contact-title">Let’s build something <br><em>worth figuring out.</em></h2><div class="contact-bottom"><p>I’m interested in opportunities in data science, <br>machine learning, and software development.</p><a class="button button-light" href="https://github.com/yhkimslv">Connect on GitHub <span aria-hidden="true">↗</span></a></div></div></section>
