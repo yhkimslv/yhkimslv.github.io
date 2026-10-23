@@ -23,73 +23,31 @@
 .project-grid[data-single-standard="true"] > .standard:not([hidden]) .contribution {
   min-height: 0;
 }
-.analysis-art .media-launch {
-  background: #e9e8dc;
-  border-color: #d2d1c3;
-}
-.analysis-art .media-action {
-  background: #f5f3e9;
-  border-color: #d2d1c3;
-}
 .project-art.study-media .media-launch {
   aspect-ratio: 4 / 3;
 }
-.analysis-feature {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: 1.1fr 1fr;
+.description-project {
+  padding: 26px 23px 16px;
   border: 1px solid var(--line);
   background: #f0eee2;
 }
-.analysis-feature > .real-media {
-  align-self: center;
-  min-width: 0;
-  padding: 30px;
+.description-project .project-body {
+  padding: 0;
 }
-.analysis-feature .media-launch {
-  background: #fff;
+.description-project .contribution {
+  min-height: 0;
 }
-.analysis-feature .media-launch img {
-  height: auto;
+.project-grid[data-single-standard="true"] > .description-project:not([hidden]) {
+  grid-template-columns: 1fr;
 }
-.analysis-feature .feature-content {
-  align-self: center;
-  padding: 35px 35px 27px 12px;
-}
-.analysis-feature h3 {
-  margin: 13px 0 19px;
-  font-family: var(--serif);
-  font-size: 36px;
-  line-height: 1.15;
-}
-.analysis-feature .feature-content > p:not(.project-context) {
-  color: var(--muted);
-  font-size: 12px;
-}
-.analysis-feature .contribution {
-  margin-top: 16px;
-}
-.analysis-feature .study-note {
-  margin-top: 14px;
-  color: var(--forest);
-  font-size: 11px;
-}
-.analysis-feature .study-note strong {
-  font-weight: 600;
-}
-.game-feature {
-  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+.project-grid > .game-feature {
   background: #e5e9df;
 }
-.game-feature > .real-media {
-  padding: 24px;
+.project-grid > .statistical-feature {
+  background: #f0eee2;
 }
-.game-feature .media-launch {
-  background: #171b19;
-  border-color: #b9c5af;
-}
-.game-feature .feature-content {
-  padding: 30px 30px 24px 8px;
+.statistical-feature .lab-project-copy > p {
+  color: var(--muted);
 }
 .project-grid .project[hidden] {
   display: none;
@@ -97,23 +55,6 @@
 @media (max-width: 1100px) {
   .work-toolbar {
     align-items: start;
-  }
-  .analysis-feature h3 {
-    font-size: 31px;
-  }
-}
-@media (max-width: 800px) {
-  .analysis-feature {
-    grid-template-columns: 1fr;
-  }
-  .analysis-feature > .real-media {
-    width: 100%;
-    max-width: 650px;
-    margin: auto;
-    padding-bottom: 0;
-  }
-  .analysis-feature .feature-content {
-    padding: 26px 30px 20px;
   }
 }
 @media (max-width: 600px) {
@@ -127,13 +68,10 @@
   .project-grid[data-single-standard="true"] > .standard:not([hidden]) .project-body {
     padding-top: 24px;
   }
-  .analysis-feature > .real-media {
-    padding: 20px 18px 0;
+  .project-grid > .description-project {
+    padding: 24px 23px 16px;
   }
-  .analysis-feature .feature-content {
-    padding: 24px 23px 18px;
-  }
-  .analysis-feature h3 {
-    font-size: 32px;
+  .project-grid[data-single-standard="true"] > .description-project:not([hidden]) .project-body {
+    padding-top: 0;
   }
 }

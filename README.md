@@ -32,7 +32,7 @@ The ten selected projects can be browsed by AI and machine learning, software an
 - DATA 144: Titanic survival prediction modeling lab.
 - DIGHUM 100: Did AI Take the Jobs? — analysis and narrative role in a collaborative study.
 
-Descriptions are based on implemented coursework and saved reports. Course solutions, raw notebooks, and private repositories are not published here. The DATA 100 images are actual saved notebook outputs; see `assets/coursework/README.md` for provenance. Cross-validation results are identified as such.
+Descriptions are based on implemented coursework and saved reports. Course solutions, raw notebooks, and private repositories are not published here. DATA 100 and STAT 135 are presented through descriptions only; their assignment figures are withheld pending publication permission. CS 61B is also description-only, with its gameplay media withheld pending permission. STAT 133 project walkthroughs remain available, consistent with the course's project-publication requirements.
 
 ## Editing and local preview
 
@@ -41,18 +41,17 @@ The website uses plain HTML, CSS, JavaScript, and SVG. No build step is required
 - `index.html`: portfolio content, project links, and page metadata.
 - `styles.css`: responsive layout, typography, and colors.
 - `media.css`: project previews and the responsive demo viewer.
-- `coursework.css`: course archive, project cards, and figure layout.
-- `selected-work.css`: expanded project filters, selected statistical study, and filtered grid layouts.
+- `coursework.css`: course archive and project cards.
+- `selected-work.css`: expanded project filters, description-only course features, and filtered grid layouts.
 - `script.js`: project/course filters, course disclosures, demo playback, and footer year.
 - `assets/media/`: real app walkthroughs, screenshots, and sample video output. See its README for sources and capture details.
-- `assets/coursework/`: selected genuine analysis figures, with provenance.
 - `assets/`: favicon and earlier conceptual illustrations.
 
 Project previews autoplay in their cards when visible. GIFs and the muted quiz video have individual Play/Pause controls; clicking a preview opens the larger demo viewer. Offscreen previews pause, and reduced-motion preferences default to still posters. The demo viewer supports pausing GIF walkthroughs, video controls, Escape to close, and keyboard focus. To replace a demo, update the card's `data-demo-src`, `data-demo-poster`, accessible description, and caption in `index.html`.
 
 Selected-work filters use each article’s `data-category` and update their counts automatically. Add a matching filter with `data-filter`, a descriptive `data-filter-label`, and a `data-filter-count` span when introducing a new area. Coursework-context links open and select the corresponding course in the archive.
 
-To add coursework, copy a `.course-card` inside its `.course-group` in `index.html`, then edit the title, description, context, and tags. A new course needs a `.course-group` with a unique `data-course` value and a matching `data-course-filter` button. Update the course counts, classroom total, and initial status text. The filters count visible cards automatically after interaction. Keep collaboration roles explicit and distinguish training, cross-validation, and test results. Optional figure buttons use `data-demo-type="image"` with an accurate description and image alt text. Native course disclosures work without JavaScript; DATA 100 opens by default.
+To add coursework, copy a `.course-card` inside its `.course-group` in `index.html`, then edit the title, description, context, and tags. A new course needs a `.course-group` with a unique `data-course` value and a matching `data-course-filter` button. Update the course counts, classroom total, and initial status text. The filters count visible cards automatically after interaction. Keep collaboration roles explicit and check the applicable course's publication policy before adding assignment outputs, source code, or media. Native course disclosures work without JavaScript; DATA 100 opens by default.
 
 Run `python3 -m http.server 8000` in this directory, then visit http://localhost:8000.
 
