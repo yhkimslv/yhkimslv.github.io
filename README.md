@@ -7,7 +7,7 @@ Personal portfolio for a UC Berkeley Data Science and Statistics student, with a
 ## Selected work
 
 - [Braille Text-to-Speech Converter](https://github.com/yhkimslv/braille-text-to-speech-converter) — AI4ALL Ignite computer vision team project. My experiment uses YOLO11n detection and EfficientNet-B0 classification.
-- [AI Quiz and Video Generation](https://github.com/yhkimslv/quiz-generator) — collaborative Likelion × NAVER ZEP project for quiz generation, validation, and video workflows.
+- [AI Quiz and Video Generation](https://github.com/yhkimslv/quiz-generator) — collaborative Likelion × ZEP project for quiz generation, validation, and video workflows.
 - [VIVA](https://github.com/yhkimslv/viva) — collaborative Git desktop application with Honda Research Institute USA through 99P Labs.
 - [Gagyebu](https://github.com/yhkimslv/gagyebu) — independently developed personal and shared finance apps.
 - [Haunted Room Escape](https://yhkimslv.github.io/#course-cs61b) — a CS 61B course team project: a seeded Java game with procedural rooms and corridors, BFS click-to-walk navigation, undo/redo, and replay-based save/load.
