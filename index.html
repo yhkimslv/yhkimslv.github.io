@@ -13,6 +13,7 @@
   <link rel="canonical" href="https://yhkimslv.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -63,7 +64,15 @@
         <p id="filter-status" class="sr-only" aria-live="polite">Showing all 4 projects.</p>
         <div class="project-grid">
           <article class="project featured" data-category="ml" aria-labelledby="braille-title">
-            <div class="feature-art"><img src="assets/braille-pipeline.svg" width="800" height="490" alt="Illustration of a Braille recognition pipeline from dot patterns to readable text and a speech waveform"><span class="art-caption">COMPUTER VISION / ACCESSIBILITY</span></div>
+            <div class="feature-art media-feature">
+              <figure class="real-media">
+                <button class="media-launch" type="button" data-demo-type="gif" data-demo-src="assets/media/braille-demo.gif" data-demo-poster="assets/media/braille-poster.webp" data-demo-title="Braille recognition in action" data-demo-description="A 14-second walkthrough assembled from actual app screenshots: select Local YOLO, upload the DUCK sample, run recognition, and inspect the text and character predictions." aria-label="Play Braille app walkthrough in a larger view">
+                  <img src="assets/media/braille-poster.webp" width="1280" height="720" alt="Actual Braille Reader screen showing recognized D U C K cells with detection boxes">
+                  <span class="media-action"><span class="play-symbol" aria-hidden="true">▶</span> Watch the app in action <span aria-hidden="true">↗</span></span>
+                </button>
+                <figcaption><span class="recording-dot" aria-hidden="true"></span> SCREEN WALKTHROUGH <span>14 sec · Local YOLO + EfficientNet</span></figcaption>
+              </figure>
+            </div>
             <div class="feature-content">
               <p class="project-context"><span>01</span> AI4ALL IGNITE · TEAM PROJECT</p>
               <h3 id="braille-title">From Braille <br>to text and speech.</h3>
@@ -78,23 +87,35 @@
           </article>
 
           <article class="project standard" data-category="ml" aria-labelledby="quiz-title">
-            <div class="project-art quiz-art" role="img" aria-label="Conceptual workflow showing a topic becoming a quiz, a validation step, and a short video">
-              <span class="art-index">02 / GENERATIVE AI</span>
-              <div class="quiz-sheet"><span class="sheet-label">A LITTLE CURIOSITY, AUTOMATED.</span><div class="quiz-symbol">Q<span>?</span></div><div class="quiz-options"><i></i><i></i><i class="chosen"></i><i></i></div></div>
-              <div class="quiz-flow"><span>TOPIC</span><b>→</b><span>QUIZ</span><b>→</b><span>VIDEO</span></div>
-            </div>
+            <figure class="project-art real-media quiz-real-media">
+              <button class="media-launch" type="button" data-demo-type="video" data-demo-src="assets/media/quiz-demo.mp4" data-demo-poster="assets/media/quiz-poster.webp" data-demo-title="A video made by the quiz generator" data-demo-description="A real seven-second output from the project's video generator, using its included 2022 World Cup sample question. The countdown ends with Argentina highlighted as the answer. Playback starts muted; sound is available in the video controls." aria-label="Play the quiz generator's actual sample video">
+                <img src="assets/media/quiz-poster.webp" width="1080" height="1920" loading="lazy" alt="Actual ZEP QUIZ video output with Argentina highlighted as the 2022 World Cup winner">
+                <span class="media-action"><span class="play-symbol" aria-hidden="true">▶</span> Play generated video <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL GENERATED OUTPUT <span>7 sec · Sample quiz</span></figcaption>
+            </figure>
             <div class="project-body"><p class="project-context">LIKELION × NAVER ZEP · COLLABORATIVE</p><h3 id="quiz-title">AI Quiz & Video Generation</h3><p>Turning topics into multiple-choice quizzes and short-form videos with a Python generation and validation workflow.</p><p class="contribution"><strong>My focus</strong> Prompt-driven quiz generation, output validation, and comparing language models for quality and consistency.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>LLM APIs</li><li>MoviePy</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/quiz-generator">View code <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>The workflow generates structured quiz content, checks question and answer formatting, and uses reusable video templates. The project also includes batch scheduling and YouTube upload tools.</p></div></details></div>
           </article>
 
           <article class="project standard" data-category="software" aria-labelledby="viva-title">
-            <div class="project-art"><img src="assets/viva-branches.svg" width="800" height="490" loading="lazy" alt="Conceptual Git history with work, branch, and merge paths"><span class="art-index">03 / DEVELOPER TOOLS</span></div>
+            <figure class="project-art real-media">
+              <button class="media-launch" type="button" data-demo-type="image" data-demo-src="assets/media/viva-clone.jpg" data-demo-title="Inside VIVA" data-demo-description="An actual screenshot from the VIVA repository's Korean user guide, showing the native GitHub project import dialog. VIVA is a collaborative project; this screenshot shows the application interface." aria-label="Enlarge the actual VIVA application screenshot">
+                <img src="assets/media/viva-clone.jpg" width="2400" height="1600" loading="lazy" alt="Actual VIVA desktop app with its Korean GitHub project import dialog open">
+                <span class="media-action">Explore the interface <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL APP SCREENSHOT <span>GitHub project import</span></figcaption>
+            </figure>
             <div class="project-body"><p class="project-context">HONDA RESEARCH INSTITUTE USA THROUGH 99P LABS</p><h3 id="viva-title">VIVA</h3><p>A visual desktop Git client that helps users understand changes, save progress, and find their way through project history.</p><p class="contribution"><strong>My focus</strong> Natural-language restore workflows, branch controls, and previews of incoming updates.</p><ul class="tags" aria-label="Technologies"><li>Electron</li><li>React</li><li>TypeScript</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/viva">View code <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>Visual commit and branch controls sit alongside optional AI assistance for commit messages, file explanations, and finding restore points. The interface supports English and Korean.</p><p>Developed as a collaborative project with Honda Research Institute USA through 99P Labs.</p></div></details></div>
           </article>
 
           <article class="project standard" data-category="software" aria-labelledby="ledger-title">
-            <div class="project-art ledger-art" role="img" aria-label="Concept illustration of personal and shared ledgers, with separate circles representing each and a connected overlap">
-              <span class="art-index">04 / EVERYDAY SOFTWARE</span><div class="ledger-circle personal"><span>my <br><strong>ledger.</strong></span></div><div class="ledger-circle shared"><span>our <br><strong>ledger.</strong></span></div><span class="ledger-caption">A LITTLE MORE CLARITY. <br>TOGETHER OR ON YOUR OWN.</span>
-            </div>
+            <figure class="project-art real-media">
+              <button class="media-launch" type="button" data-demo-type="gif" data-demo-src="assets/media/gagyebu-demo.gif" data-demo-poster="assets/media/gagyebu-poster.webp" data-demo-title="My Ledger in action" data-demo-description="A walkthrough captured from the actual My Ledger app: add an expense, save it, switch to the calendar, and explore category statistics. All amounts and transactions are sample data in an isolated local copy of the app." aria-label="Play the My Ledger app walkthrough with sample data">
+                <img src="assets/media/gagyebu-poster.webp" width="940" height="680" loading="lazy" alt="Actual My Ledger app displaying its category chart and spending statistics with sample transactions">
+                <span class="media-action"><span class="play-symbol" aria-hidden="true">▶</span> Watch My Ledger <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption><span class="recording-dot" aria-hidden="true"></span> SCREEN WALKTHROUGH <span>Sample data</span></figcaption>
+            </figure>
             <div class="project-body"><p class="project-context">INDEPENDENT PROJECT</p><h3 id="ledger-title">Gagyebu</h3><p>Personal and shared finance apps for keeping track of daily spending, budgets, and who owes what.</p><p class="contribution"><strong>My focus</strong> Independently designing and developing My Ledger and Our Ledger across web and desktop.</p><ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>Electron</li><li>Supabase</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/gagyebu">View code <span aria-hidden="true">↗</span></a><a href="https://piggybox.netlify.app">My Ledger <span aria-hidden="true">↗</span></a><a href="https://piggyduo.netlify.app">Our Ledger <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>My Ledger supports income, expenses, budgets, recurring payments, savings goals, and payment balances. Our Ledger supports configurable expense splits and settlement balances.</p><p>Both support offline use, optional synchronization through a user-configured Supabase project, and English and Korean interfaces.</p><a href="https://github.com/yhkimslv/gagyebu-releases/releases">Desktop downloads ↗</a></div></details></div>
           </article>
         </div>
@@ -115,6 +136,15 @@
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><p class="eyebrow">04 / WHAT’S NEXT</p><h2 id="contact-title">Let’s build something <br><em>worth figuring out.</em></h2><div class="contact-bottom"><p>I’m interested in opportunities in data science, <br>machine learning, and software development.</p><a class="button button-light" href="https://github.com/yhkimslv">Connect on GitHub <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
+  <dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-title" aria-describedby="demo-description">
+    <div class="demo-header">
+      <h2 id="demo-title"></h2>
+      <form method="dialog"><button class="demo-close" type="submit" aria-label="Close project demo">Close <span aria-hidden="true">×</span></button></form>
+    </div>
+    <p id="demo-description" class="demo-description"></p>
+    <div class="demo-canvas" id="demo-canvas"></div>
+    <div class="demo-footer"><span>Real project media</span><button id="demo-toggle" type="button" hidden>Pause walkthrough</button></div>
+  </dialog>
   <footer class="site-footer container"><span>© <span id="year">2026</span> Yoonha Kim</span><span>Built with curiosity. Based at Berkeley.</span><a href="#home">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
