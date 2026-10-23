@@ -4,13 +4,19 @@ Personal portfolio for a UC Berkeley Data Science and Statistics student, with a
 
 **Website:** https://yhkimslv.github.io/
 
-## Projects
+## Selected work
 
 - [Braille Text-to-Speech Converter](https://github.com/yhkimslv/braille-text-to-speech-converter) — AI4ALL Ignite computer vision team project. My experiment uses YOLO11n detection and EfficientNet-B0 classification.
 - [AI Quiz and Video Generation](https://github.com/yhkimslv/quiz-generator) — collaborative Likelion × NAVER ZEP project for quiz generation, validation, and video workflows.
 - [VIVA](https://github.com/yhkimslv/viva) — collaborative Git desktop application with Honda Research Institute USA through 99P Labs.
 - [Gagyebu](https://github.com/yhkimslv/gagyebu) — independently developed personal and shared finance apps.
 - Code Compass / RepoKnow — a Git-history and CodeQL repository-analysis CLI prototype. Source is private.
+- California Bicyclist Collisions — an interactive STAT 133 dashboard with an actual tab-switching walkthrough.
+- State of the Union — a STAT 133 text-analysis site, previewed through its rendered frequency and sentiment views.
+- Cook County Housing Models — collaborative DATA 100 A1/A2 exploration, regression modeling, and residual analysis.
+- Gamma-Ray Arrivals & Bootstrap Uncertainty — STAT 135 estimation and bootstrap analyses from Homework 3 and 4.
+
+The nine selected projects can be browsed by AI and machine learning, software and systems, data visualization, or statistical analysis. Selected coursework also remains in the course archive for context.
 
 ## Coursework archive
 
@@ -35,12 +41,15 @@ The website uses plain HTML, CSS, JavaScript, and SVG. No build step is required
 - `styles.css`: responsive layout, typography, and colors.
 - `media.css`: project previews and the responsive demo viewer.
 - `coursework.css`: course archive, project cards, and figure layout.
+- `selected-work.css`: expanded project filters, selected statistical study, and filtered grid layouts.
 - `script.js`: project/course filters, course disclosures, demo playback, and footer year.
 - `assets/media/`: real app walkthroughs, screenshots, and sample video output. See its README for sources and capture details.
 - `assets/coursework/`: selected genuine analysis figures, with provenance.
 - `assets/`: favicon and earlier conceptual illustrations.
 
 Project previews autoplay in their cards when visible. GIFs and the muted quiz video have individual Play/Pause controls; clicking a preview opens the larger demo viewer. Offscreen previews pause, and reduced-motion preferences default to still posters. The demo viewer supports pausing GIF walkthroughs, video controls, Escape to close, and keyboard focus. To replace a demo, update the card's `data-demo-src`, `data-demo-poster`, accessible description, and caption in `index.html`.
+
+Selected-work filters use each article’s `data-category` and update their counts automatically. Add a matching filter with `data-filter`, a descriptive `data-filter-label`, and a `data-filter-count` span when introducing a new area. Coursework-context links open and select the corresponding course in the archive.
 
 To add coursework, copy a `.course-card` inside its `.course-group` in `index.html`, then edit the title, description, context, and tags. A new course needs a `.course-group` with a unique `data-course` value and a matching `data-course-filter` button. Update the course counts, classroom total, and initial status text. The filters count visible cards automatically after interaction. Keep collaboration roles explicit and distinguish training, cross-validation, and test results. Optional figure buttons use `data-demo-type="image"` with an accurate description and image alt text. Native course disclosures work without JavaScript; DATA 100 opens by default.
 

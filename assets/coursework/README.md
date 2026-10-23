@@ -1,6 +1,6 @@
-# DATA 100 coursework figures
+# Coursework figures
 
-These figures are saved outputs from completed Fall 2025 UC Berkeley DATA 100 project notebooks. They were extracted directly from the notebooks' embedded PNG data without executing the notebooks or changing the images. The plotting cells differ from the course starter notebooks. Raw notebooks, solution code, and datasets are not included here.
+The DATA 100 figures below are saved outputs from completed Fall 2025 UC Berkeley project notebooks. They were extracted directly from the notebooks' embedded PNG data without executing the notebooks or changing the images. The plotting cells differ from the course starter notebooks. Raw notebooks, solution code, and datasets are not included here.
 
 Cell and output indices below are zero-based. Each figure is output 0 of the specified cell.
 
@@ -23,3 +23,12 @@ SHA-256 fingerprints identify the completed notebook exports from which the imag
 - Project A2: `3c8cabd32afe21b517e74ad1cfb8752c37d739423507568ac058e449dd2d01d9`
 - Project B1: `2943a6d40ec73440ef9bb3fbfb8ba6a405682f3037f083c94620378667ab0f70`
 - Project B2: `e39ec0e9f2de803294dacc75f631ea3f89b622b75b7e5bf28a8d37565055c81f`
+
+## STAT 135 estimation and bootstrap figure
+
+`stat135-gamma-bootstrap.png` is the unmodified saved R/ggplot2 output `unnamed-chunk-9-2.png` from Yoonha Kim's Spring 2026 STAT 135 Homework 3 Quarto report, `hw3.qmd`. The report explicitly names Yoonha Kim as its author; its completed estimation and simulation code produced this figure. The image shows the parametric bootstrap distribution of the Gamma rate estimator (method of moments), with the original estimate and percentile/basic confidence intervals marked as labeled. The source uses 5,000 bootstrap samples. It is a statistical course analysis of gamma-ray interarrival times, not a predictive-model performance metric.
+
+The saved figure was copied directly, without executing or modifying the coursework. Visual inspection found only aggregate statistical output, with readable axes and no names, student IDs, addresses, or individual records. Dimensions: 1305 × 825. Raw coursework solutions and datasets are not included.
+
+- Source figure SHA-256: `1b89d65fb2ffd5c1796919632363ac03acf55faf524de5b8f29abb4e027cbb21`
+- Source Quarto report SHA-256: `ff1e035731352b637c8377696c41038032ff791c5a2d52119e807c056fdb337c`

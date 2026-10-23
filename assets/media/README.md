@@ -38,3 +38,17 @@ All displayed project media comes from real app interfaces or the project's own 
 - All entries are clearly named sample transactions. No personal financial records were used.
 - Source revision: `877e3944cafb4855490c1c3e2035d6f53cad30ed` of https://github.com/yhkimslv/gagyebu
 - Captured on October 22, 2026.
+
+## California Bicyclist Collisions
+
+- `bicyclist-demo.gif`: five actual screenshots of the authored STAT 133 Project 4 rendered dashboard, captured by switching its Day-Hour, Collision Type, and Long-term Trends tabs.
+- `bicyclist-poster.webp`: the Collision Type view, including aggregate totals and collision-type rankings.
+- Source: the completed `project4.qmd` / self-contained `project4.html`, titled “California Bicyclist Collisions Dashboard (2014-2023)” and authored by Yoonha Kim.
+- Captured on October 22, 2026. 943 × 925; 12.8 seconds, looping. Browser content screenshots contain no pointer or recording overlay. The original dashboard was served locally for capture; no course solution code or datasets are published here.
+
+## State of the Union
+
+- `sotu-demo.gif`: five actual screenshots from the completed STAT 133 Project 6 Quarto analysis site: overall word frequencies, words by president, keyword trends, Bing sentiment totals, and sentiment over time.
+- `sotu-poster.webp`: the words-by-president view.
+- Sources: rendered `analysis1.html` and `analysis2.html` from the completed site, corresponding to authored Quarto analysis files. All code disclosures stayed closed.
+- Captured on October 22, 2026. 928 × 911; 12.8 seconds, looping. Browser content screenshots contain no pointer or recording overlay. Only the visible outputs are included; raw analysis code is not hosted with the portfolio.

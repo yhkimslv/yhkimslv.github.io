@@ -3,6 +3,21 @@
 const filters = document.querySelectorAll('[data-filter]');
 const projects = document.querySelectorAll('[data-category]');
 const status = document.getElementById('filter-status');
+const projectGrid = document.querySelector('.project-grid');
+
+function syncProjectLayout(category) {
+  const standards = [...projects].filter(project => !project.hidden && project.classList.contains('standard'));
+  projectGrid.dataset.activeFilter = category;
+  projectGrid.dataset.singleStandard = String(category !== 'all' && standards.length === 1);
+}
+
+filters.forEach(button => {
+  const count = button.querySelector('[data-filter-count]');
+  if (!count) return;
+  const total = [...projects].filter(project => button.dataset.filter === 'all' || project.dataset.category === button.dataset.filter).length;
+  count.textContent = String(total).padStart(2, '0');
+});
+syncProjectLayout('all');
 
 filters.forEach(button => {
   button.addEventListener('click', () => {
@@ -19,7 +34,8 @@ filters.forEach(button => {
     });
     status.textContent = category === 'all'
       ? `Showing all ${visible} projects.`
-      : `Showing ${visible} ${category === 'ml' ? 'machine learning and AI' : 'software'} projects.`;
+      : `Showing ${visible} ${button.dataset.filterLabel} projects.`;
+    syncProjectLayout(category);
     syncPreviews();
   });
 });
@@ -67,6 +83,15 @@ courseExpand.addEventListener('click', () => {
   const expand = !visibleGroups.every(group => group.open);
   visibleGroups.forEach(group => { group.open = expand; });
   syncCourseExpand();
+});
+
+document.querySelectorAll('a[href^="#course-"]').forEach(link => {
+  link.addEventListener('click', () => {
+    const group = document.getElementById(link.hash.slice(1));
+    if (!group?.dataset.course) return;
+    [...courseFilters].find(button => button.dataset.courseFilter === group.dataset.course)?.click();
+    group.open = true;
+  });
 });
 
 const demoDialog = document.getElementById('demo-dialog');

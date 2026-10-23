@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="media.css">
   <link rel="stylesheet" href="coursework.css">
+  <link rel="stylesheet" href="selected-work.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -54,16 +55,18 @@
 
     <section class="work-section section-pad" id="work" aria-labelledby="work-title">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">01 / BUILDING & EXPERIMENTING</p><h2 id="work-title">Selected work<span class="accent">.</span></h2></div><p>From recognizing Braille to making <br>Git a little more approachable.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">01 / BUILDING & EXPERIMENTING</p><h2 id="work-title">Selected work<span class="accent">.</span></h2></div><p>Accessible AI, useful software, <br>visual stories, and statistical experiments.</p></div>
         <div class="work-toolbar">
           <div class="filters" role="group" aria-label="Filter projects">
-            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span>05</span></button>
-            <button type="button" class="filter" data-filter="ml" aria-pressed="false">Machine learning & AI</button>
-            <button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button>
+            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span data-filter-count>09</span></button>
+            <button type="button" class="filter" data-filter="ml" data-filter-label="AI and machine learning" aria-pressed="false">AI &amp; machine learning <span data-filter-count>02</span></button>
+            <button type="button" class="filter" data-filter="software" data-filter-label="software and systems" aria-pressed="false">Software &amp; systems <span data-filter-count>03</span></button>
+            <button type="button" class="filter" data-filter="visualization" data-filter-label="data visualization" aria-pressed="false">Data visualization <span data-filter-count>02</span></button>
+            <button type="button" class="filter" data-filter="statistics" data-filter-label="statistical analysis" aria-pressed="false">Statistical analysis <span data-filter-count>02</span></button>
           </div>
           <span class="toolbar-note" aria-hidden="true">IDEA → EXPERIMENT → APPLICATION</span>
         </div>
-        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 5 projects.</p>
+        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 9 projects.</p>
         <div class="project-grid">
           <article class="project featured" data-category="ml" aria-labelledby="braille-title">
             <div class="feature-art media-feature">
@@ -119,6 +122,50 @@
               <figcaption><span class="recording-dot" aria-hidden="true"></span> SCREEN WALKTHROUGH <span>Sample data</span></figcaption>
             </figure>
             <div class="project-body"><p class="project-context">INDEPENDENT PROJECT</p><h3 id="ledger-title">Gagyebu</h3><p>Personal and shared finance apps for keeping track of daily spending, budgets, and who owes what.</p><p class="contribution"><strong>My focus</strong> Independently designing and developing My Ledger and Our Ledger across web and desktop.</p><ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>Electron</li><li>Supabase</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/gagyebu">View code <span aria-hidden="true">↗</span></a><a href="https://piggybox.netlify.app">My Ledger <span aria-hidden="true">↗</span></a><a href="https://piggyduo.netlify.app">Our Ledger <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>My Ledger supports income, expenses, budgets, recurring payments, savings goals, and payment balances. Our Ledger supports configurable expense splits and settlement balances.</p><p>Both support offline use, optional synchronization through a user-configured Supabase project, and English and Korean interfaces.</p><a href="https://github.com/yhkimslv/gagyebu-releases/releases">Desktop downloads ↗</a></div></details></div>
+          </article>
+
+          <article class="project standard" data-category="visualization" aria-labelledby="bicyclist-title">
+            <figure class="project-art real-media study-media">
+              <button class="media-launch" type="button" data-demo-type="gif" data-demo-src="assets/media/bicyclist-demo.gif" data-demo-poster="assets/media/bicyclist-poster.webp" data-demo-title="California bicyclist collisions dashboard" data-demo-description="An actual walkthrough of my rendered STAT 133 dashboard: compare collisions by day and hour, separate fatal and nonfatal patterns, explore collision types, and review trends from 2014 through 2023." aria-label="Enlarge the bicyclist collisions dashboard walkthrough">
+                <img src="assets/media/bicyclist-poster.webp" width="943" height="925" loading="lazy" alt="Actual California bicyclist collisions dashboard with collision totals and type rankings">
+                <span class="media-action">View larger <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL DASHBOARD <span>Tabs, comparisons &amp; trends</span></figcaption>
+            </figure>
+            <div class="project-body"><p class="project-context">STAT 133 · DATA VISUALIZATION</p><h3 id="bicyclist-title">California Bicyclist Collisions</h3><p>An interactive dashboard exploring a decade of California bicycle collisions through daily patterns, collision types, and fatal and nonfatal trends.</p><p class="contribution"><strong>My focus</strong> Joining collision records, summarizing patterns, and building interactive Plotly views.</p><ul class="tags" aria-label="Technologies"><li>R</li><li>Plotly</li><li>ggplot2</li><li>Quarto</li></ul><div class="project-links"><a href="#course-stat133">Coursework context <span aria-hidden="true">↘</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>The dashboard links day and hour comparisons with collision-type rankings and long-term trends across 2014–2023. Separate scales help show fatal patterns alongside the much larger nonfatal counts.</p></div></details></div>
+          </article>
+
+          <article class="project standard" data-category="visualization" aria-labelledby="sotu-title">
+            <figure class="project-art real-media study-media">
+              <button class="media-launch" type="button" data-demo-type="gif" data-demo-src="assets/media/sotu-demo.gif" data-demo-poster="assets/media/sotu-poster.webp" data-demo-title="State of the Union text analysis" data-demo-description="Actual pages from my rendered STAT 133 analysis site: word frequencies, comparisons by president, keyword trends, and lexicon-based sentiment analysis of speeches from 2001 through 2021." aria-label="Enlarge the State of the Union analysis walkthrough">
+                <img src="assets/media/sotu-poster.webp" width="928" height="911" loading="lazy" alt="Actual State of the Union analysis page comparing frequent words across four presidents">
+                <span class="media-action">View larger <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL ANALYSIS SITE <span>Words, topics &amp; sentiment</span></figcaption>
+            </figure>
+            <div class="project-body"><p class="project-context">STAT 133 · TEXT ANALYSIS &amp; DATA STORY</p><h3 id="sotu-title">State of the Union</h3><p>Tracing presidential language through word frequencies, common phrases, keyword trends, and sentiment lexicons in speeches from 2001–2021.</p><p class="contribution"><strong>My focus</strong> Text preparation, frequency and sentiment analysis, and an interactive Quarto presentation.</p><ul class="tags" aria-label="Technologies"><li>R</li><li>tidytext</li><li>Plotly</li><li>Quarto</li></ul><div class="project-links"><a href="#course-stat133">Coursework context <span aria-hidden="true">↘</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>Frequency and bigram views explore the language of individual administrations. Bing and NRC lexicons provide complementary views of sentiment and emotion, with comparisons over time.</p><p>Comparing dictionaries and inspecting contributing words helps explain how the sentiment scores are formed.</p></div></details></div>
+          </article>
+
+          <article class="project standard" data-category="statistics" aria-labelledby="housing-title">
+            <figure class="project-art real-media study-media analysis-art">
+              <button class="media-launch" type="button" data-demo-type="image" data-demo-src="assets/coursework/data100-housing-residuals.png" data-demo-title="Cook County housing model residuals" data-demo-description="An actual saved residual plot from my collaborative DATA 100 housing project. Observed prices and residuals are in log-price space. The study combines data exploration and regression modeling across Projects A1 and A2." aria-label="Enlarge the Cook County housing residual plot">
+                <img src="assets/coursework/data100-housing-residuals.png" width="1004" height="781" loading="lazy" alt="Saved residual scatter plot against observed log sale prices for the Cook County housing model">
+                <span class="media-action">View analysis figure <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL NOTEBOOK OUTPUT <span>Residuals in log-price space</span></figcaption>
+            </figure>
+            <div class="project-body"><p class="project-context">DATA 100 · COLLABORATIVE COURSEWORK</p><h3 id="housing-title">Cook County Housing Models</h3><p>From property records to regression models: exploring home sales, engineering features, and evaluating predictions with cross-validation.</p><p class="contribution"><strong>My focus</strong> Data cleaning, feature engineering, model comparison, and residual analysis.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>Cross-validation</li></ul><div class="project-links"><a href="#course-data100">Coursework context <span aria-hidden="true">↘</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>Projects A1 and A2 connect exploratory analysis with linear regression pipelines, log transformations, and four-fold model comparison. The residual plot makes model behavior visible beyond a single summary score.</p></div></details></div>
+          </article>
+
+          <article class="project analysis-feature" data-category="statistics" aria-labelledby="gamma-title">
+            <figure class="real-media analysis-art">
+              <button class="media-launch" type="button" data-demo-type="image" data-demo-src="assets/coursework/stat135-gamma-bootstrap.png" data-demo-title="Gamma rate estimate: bootstrap uncertainty" data-demo-description="An unmodified saved plot from my STAT 135 Homework 3 report. It shows 5,000 parametric bootstrap estimates of the Gamma rate parameter, with the point estimate, percentile interval, and basic bootstrap interval. The broader study compares method-of-moments and maximum-likelihood estimates across Homework 3 and 4." aria-label="Enlarge the Gamma bootstrap distribution and confidence intervals">
+                <img src="assets/coursework/stat135-gamma-bootstrap.png" width="1305" height="825" loading="lazy" alt="Parametric bootstrap distribution of the Gamma rate estimate, showing percentile and basic confidence intervals">
+                <span class="media-action">View analysis figure <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption>ACTUAL SAVED FIGURE <span>Estimation &amp; uncertainty</span></figcaption>
+            </figure>
+            <div class="feature-content"><p class="project-context">STAT 135 · STATISTICAL ANALYSIS</p><h3 id="gamma-title">Gamma-Ray Arrivals <br><em>&amp; Bootstrap Uncertainty</em></h3><p>Modeled gamma-ray interarrival times, compared method-of-moments and maximum-likelihood estimates, and used bootstrap simulations to quantify uncertainty.</p><p class="contribution"><strong>My focus</strong> Implementing estimators and simulations, then comparing percentile and basic bootstrap confidence intervals.</p><p class="study-note"><strong>5,000</strong> parametric bootstrap samples in the saved analysis.</p><ul class="tags" aria-label="Technologies"><li>R</li><li>ggplot2</li><li>Bootstrap</li><li>Quarto</li></ul><div class="project-links"><a href="#course-stat135">Coursework context <span aria-hidden="true">↘</span></a></div><details><summary>Inside the study <span aria-hidden="true">+</span></summary><div class="detail-body"><p>This study brings together completed Homework 3 and 4 analyses: Gamma-distribution estimation, parametric and nonparametric bootstrap, and confidence intervals. The figure is an original saved output from the submitted report.</p></div></details></div>
           </article>
 
           <article class="project lab-project" data-category="software" aria-labelledby="repoknow-title">
