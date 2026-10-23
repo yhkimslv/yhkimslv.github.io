@@ -1,6 +1,6 @@
 # Project media sources
 
-All displayed project media comes from real app interfaces or the project's own output. Previews use still posters; animation starts only when the visitor opens a demo.
+All displayed project media comes from real app interfaces or the project's own output. Previews autoplay when their cards are visible, with individual pause controls. Offscreen previews pause; reduced-motion preferences default to still posters. Clicking a preview opens a larger view.
 
 ## Braille Reader
 
@@ -19,9 +19,13 @@ All displayed project media comes from real app interfaces or the project's own 
 
 ## VIVA
 
-- `viva-clone.jpg`: an existing application screenshot from the repository's Korean user guide. The source file has a `.png` extension but contains JPEG image data.
-- Source: https://github.com/yhkimslv/viva/blob/main/assets/screenshots/native-clone-ko.png
-- The screenshot shows the Korean GitHub project import dialog. It is a screenshot, not a recording.
+- `viva-demo.gif`: an actual English-language VIVA walkthrough captured from the unmodified desktop app with an isolated demo profile and sample Git repository.
+- The sequence creates a feature branch, stages two changed files, enters a commit message, saves a local Git commit, and switches to the main branch.
+- `viva-poster.webp`: the staged files and commit message screen.
+- The app was not connected to GitHub or an AI provider. All project files are demonstration data.
+- The earlier `viva-clone.jpg` screenshot is retained as an unused reference; the displayed preview uses the English GIF.
+- Project: https://github.com/yhkimslv/viva
+- Source revision: `261a86b4c3289cc2d31d17a6b45e9e18e2d90658`. The isolated sample repository records the demonstrated commit as `fb0b615d092f846cb0961e20d802e3383711b048`.
 - The original MIT license is retained in `VIVA-LICENSE.txt`.
 
 ## My Ledger

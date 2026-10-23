@@ -24,7 +24,7 @@ The website uses plain HTML, CSS, JavaScript, and SVG. No build step is required
 - `assets/media/`: real app walkthroughs, screenshots, and sample video output. See its README for sources and capture details.
 - `assets/`: favicon and earlier conceptual illustrations.
 
-Project previews show still images until clicked. The demo viewer supports pausing GIF walkthroughs, video controls, Escape to close, and keyboard focus. To replace a demo, update the card's `data-demo-src`, `data-demo-poster`, accessible description, and caption in `index.html`.
+Project previews autoplay in their cards when visible. GIFs and the muted quiz video have individual Play/Pause controls; clicking a preview opens the larger demo viewer. Offscreen previews pause, and reduced-motion preferences default to still posters. The demo viewer supports pausing GIF walkthroughs, video controls, Escape to close, and keyboard focus. To replace a demo, update the card's `data-demo-src`, `data-demo-poster`, accessible description, and caption in `index.html`.
 
 Run `python3 -m http.server 8000` in this directory, then visit http://localhost:8000.
 

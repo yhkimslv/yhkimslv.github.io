@@ -20,6 +20,7 @@ filters.forEach(button => {
     status.textContent = category === 'all'
       ? `Showing all ${visible} projects.`
       : `Showing ${visible} ${category === 'ml' ? 'machine learning and AI' : 'software'} projects.`;
+    syncPreviews();
   });
 });
 
@@ -32,6 +33,112 @@ const demoDescription = document.getElementById('demo-description');
 const demoToggle = document.getElementById('demo-toggle');
 let activeDemo = null;
 let walkthroughPaused = false;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const previews = [];
+
+function wantsPreview(preview) {
+  return preview.userChoice ?? !reducedMotion.matches;
+}
+
+function canPlayPreview(preview) {
+  return wantsPreview(preview) && preview.visible && !document.hidden
+    && !demoDialog.open && !preview.launcher.closest('[data-category]')?.hidden;
+}
+
+function syncPreview(preview) {
+  const shouldPlay = canPlayPreview(preview);
+  const label = wantsPreview(preview) ? 'Pause preview' : 'Play preview';
+  preview.toggle.textContent = label;
+  preview.toggle.setAttribute('aria-label', `${label}: ${preview.title}`);
+  if (shouldPlay === preview.playing) return;
+
+  preview.playing = shouldPlay;
+  const attempt = ++preview.attempt;
+  if (preview.type === 'video') {
+    if (shouldPlay) {
+      if (!preview.media.hasAttribute('src')) preview.media.src = preview.source;
+      preview.media.play().catch(() => {
+        // Leave a usable Play button when a browser declines autoplay.
+        if (attempt !== preview.attempt || !canPlayPreview(preview)) return;
+        preview.userChoice = false;
+        syncPreview(preview);
+      });
+    } else {
+      preview.media.pause();
+    }
+  } else {
+    // GIFs have no native pause API. A still poster stops all animation;
+    // returning to the GIF replays the walkthrough.
+    preview.media.src = shouldPlay ? preview.source : preview.poster;
+  }
+}
+
+function syncPreviews() {
+  previews.forEach(syncPreview);
+}
+
+const previewObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const preview = previews.find(item => item.launcher === entry.target);
+      if (!preview) return;
+      preview.visible = entry.isIntersecting && entry.intersectionRatio > 0;
+      syncPreview(preview);
+    });
+  }, { threshold: 0.01 })
+  : null;
+
+document.querySelectorAll('[data-demo-src]').forEach((launcher, index) => {
+  const data = launcher.dataset;
+  if (data.demoType !== 'gif' && data.demoType !== 'video') return;
+  const image = launcher.querySelector('img');
+  if (!image) return;
+  const poster = data.demoPoster || image.getAttribute('src');
+  let media = image;
+
+  if (data.demoType === 'video') {
+    media = document.createElement('video');
+    media.muted = true;
+    media.defaultMuted = true;
+    media.loop = true;
+    media.playsInline = true;
+    media.preload = 'none';
+    media.poster = poster;
+    media.setAttribute('aria-hidden', 'true');
+    media.setAttribute('tabindex', '-1');
+    media.width = Number(image.getAttribute('width'));
+    media.height = Number(image.getAttribute('height'));
+    image.replaceWith(media);
+  } else {
+    media.src = poster;
+  }
+  media.id = `project-preview-${index + 1}`;
+
+  const controls = document.createElement('div');
+  controls.className = 'preview-controls';
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'preview-toggle';
+  toggle.setAttribute('aria-controls', media.id);
+  controls.append(toggle);
+  launcher.closest('figure').append(controls);
+
+  const preview = {
+    launcher, media, toggle, poster, source: data.demoSrc,
+    type: data.demoType, title: data.demoTitle,
+    userChoice: null, visible: !previewObserver, playing: false, attempt: 0,
+  };
+  previews.push(preview);
+  toggle.addEventListener('click', () => {
+    preview.userChoice = !wantsPreview(preview);
+    syncPreview(preview);
+  });
+  syncPreview(preview);
+  previewObserver?.observe(launcher);
+});
+
+document.addEventListener('visibilitychange', syncPreviews);
+reducedMotion.addEventListener('change', syncPreviews);
 
 document.querySelectorAll('[data-demo-src]').forEach(launcher => {
   launcher.addEventListener('click', () => {
@@ -60,6 +167,7 @@ document.querySelectorAll('[data-demo-src]').forEach(launcher => {
     activeDemo = { media, type: data.demoType, source: data.demoSrc, poster: data.demoPoster };
     demoDialog.showModal();
     document.body.classList.add('demo-is-open');
+    syncPreviews();
   });
 });
 
@@ -75,8 +183,13 @@ demoDialog.addEventListener('click', event => {
 });
 
 demoDialog.addEventListener('close', () => {
-  if (activeDemo?.type === 'video') activeDemo.media.pause();
+  if (activeDemo?.type === 'video') {
+    activeDemo.media.pause();
+    activeDemo.media.removeAttribute('src');
+    activeDemo.media.load();
+  }
   demoCanvas.replaceChildren();
   activeDemo = null;
   document.body.classList.remove('demo-is-open');
+  syncPreviews();
 });
