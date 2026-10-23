@@ -14,7 +14,7 @@ Personal portfolio for a UC Berkeley Data Science and Statistics student, with a
 - Code Compass / RepoKnow — a Git-history and CodeQL repository-analysis CLI prototype. Source is private.
 - California Bicyclist Collisions — an interactive STAT 133 dashboard with an actual tab-switching walkthrough.
 - State of the Union — a STAT 133 text-analysis site, previewed through its rendered frequency and sentiment views.
-- Cook County Housing Models — DATA 100 A1/A2 coursework in exploration, regression modeling, and residual analysis. I discussed approaches with a classmate and wrote my own code and answers.
+- Cook County Housing Models — individual DATA 100 A1/A2 coursework in exploration, regression modeling, and residual analysis.
 - Gamma-Ray Arrivals & Bootstrap Uncertainty — STAT 135 estimation and bootstrap analyses from Homework 3 and 4.
 
 The ten selected projects can be browsed by AI and machine learning, software and systems, data visualization, or statistical analysis. Selected coursework also remains in the course archive for context.
