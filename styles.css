@@ -3,7 +3,7 @@
   --paper:#f6f4ed;
   --ink:#18251e;
   --forest:#244e3b;
-  --muted:#62685e;
+  --muted:#535e52;
   --line:#d8d9cf;
   --orange:#b94f32;
   --serif:'DM Serif Display',Georgia,serif;
@@ -21,8 +21,8 @@ body {
   background:var(--paper);
   color:var(--ink);
   font-family:var(--sans);
-  font-size:15px;
-  line-height:1.7
+  font-size:1rem;
+  line-height:1.75
 }
 a {
   color:inherit;
@@ -68,7 +68,7 @@ em {
   padding-block:108px
 }
 .eyebrow {
-  font-size:10px;
+  font-size:.75rem;
   font-weight:600;
   letter-spacing:1.65px;
   line-height:1.5
@@ -116,7 +116,7 @@ em {
 .site-header nav {
   display:flex;
   gap:36px;
-  font-size:13px
+  font-size:.9375rem
 }
 .site-header nav a {
   padding:12px 0
@@ -158,8 +158,8 @@ em {
   color:var(--forest)
 }
 .hero-description {
-  max-width:435px;
-  font-size:15px;
+  max-width:475px;
+  font-size:1.0625rem;
   color:var(--muted);
   margin:25px 0 29px
 }
@@ -170,7 +170,7 @@ em {
   gap:43px;
   padding:14px 22px;
   border-radius:3px;
-  font-size:12px;
+  font-size:.875rem;
   font-weight:500;
   transition:background .2s,transform .2s
 }
@@ -303,11 +303,11 @@ em {
   align-items:center;
   margin-top:26px;
   padding:23px 0 31px;
-  font-size:11px;
+  font-size:.8125rem;
   color:var(--muted)
 }
 .hero-footer a {
-  font-size:9px;
+  font-size:.75rem;
   letter-spacing:1.3px
 }
 .hero-footer a span {
@@ -332,8 +332,8 @@ em {
 }
 .section-heading>p {
   color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
+  font-size:1rem;
+  line-height:1.75;
   padding-bottom:4px
 }
 .work-toolbar {
@@ -356,7 +356,7 @@ em {
   background:transparent;
   color:#555f53;
   cursor:pointer;
-  font-size:11px;
+  font-size:.875rem;
   transition:background .2s
 }
 .filter.active {
@@ -367,12 +367,12 @@ em {
   background:#dddfd3
 }
 .filter span {
-  font-size:9px;
+  font-size:.75rem;
   opacity:.6;
   margin-left:9px
 }
 .toolbar-note {
-  font-size:8px;
+  font-size:.6875rem;
   letter-spacing:1.1px;
   color:var(--muted)
 }
@@ -417,7 +417,7 @@ em {
   padding:40px 42px 21px
 }
 .project-context {
-  font-size:8px;
+  font-size:.75rem;
   font-weight:600;
   letter-spacing:1px;
   line-height:1.7;
@@ -435,7 +435,8 @@ em {
   margin:17px 0
 }
 .feature-content>p:not(.project-context):not(.metric-note) {
-  font-size:12px;
+  font-size:1rem;
+  line-height:1.75;
   color:var(--muted)
 }
 .contribution {
@@ -446,7 +447,7 @@ em {
   color:var(--ink);
   display:block;
   margin-bottom:3px;
-  font-size:10px;
+  font-size:.875rem;
   letter-spacing:.2px
 }
 .metric-row {
@@ -475,12 +476,12 @@ em {
   font-size:20px
 }
 .metric-row>div>span {
-  font-size:8px;
+  font-size:.75rem;
   color:var(--muted);
   margin-top:4px
 }
 .metric-note {
-  font-size:8px;
+  font-size:.8125rem;
   color:var(--muted);
   margin:9px 0 14px;
   line-height:1.7
@@ -499,7 +500,7 @@ em {
 .tags li {
   border:1px solid #d2d7c9;
   border-radius:3px;
-  font-size:8px;
+  font-size:.75rem;
   line-height:1.5;
   padding:4px 8px;
   color:#596153
@@ -509,7 +510,7 @@ em {
   flex-wrap:wrap;
   gap:19px;
   margin:20px 0 17px;
-  font-size:10px;
+  font-size:.875rem;
   font-weight:600
 }
 .project-links a {
@@ -529,7 +530,7 @@ summary {
   justify-content:space-between;
   align-items:center;
   padding:13px 0;
-  font-size:10px;
+  font-size:.875rem;
   color:var(--muted)
 }
 summary::-webkit-details-marker {
@@ -543,7 +544,8 @@ details[open] summary>span {
   transform:rotate(45deg)
 }
 .detail-body {
-  font-size:11px;
+  font-size:1rem;
+  line-height:1.75;
   color:var(--muted);
   padding-bottom:15px
 }
@@ -586,7 +588,8 @@ details[open] summary>span {
   margin:11px 0 14px
 }
 .project-body>p:not(.project-context) {
-  font-size:12px;
+  font-size:1rem;
+  line-height:1.75;
   color:var(--muted)
 }
 .project-body .contribution {
@@ -712,7 +715,7 @@ details[open] summary>span {
 }
 .academic-intro>p:last-child {
   color:var(--muted);
-  font-size:13px;
+  font-size:1rem;
   max-width:250px
 }
 .academic-list article {
@@ -734,7 +737,7 @@ details[open] summary>span {
   margin:10px 0 13px
 }
 .academic-list article>div>p:not(.project-context) {
-  font-size:12px;
+  font-size:1rem;
   color:var(--muted)
 }
 .academic-list .tags {
@@ -752,18 +755,18 @@ details[open] summary>span {
   margin:18px 0 28px
 }
 .about-copy>p:not(.eyebrow) {
-  font-size:13px;
+  font-size:1rem;
   color:var(--muted);
   margin-bottom:17px;
   max-width:490px
 }
 .about-copy .about-lead {
-  font-size:17px!important;
+  font-size:1.125rem!important;
   line-height:1.6;
   color:var(--ink)!important
 }
 .text-link {
-  font-size:11px;
+  font-size:.875rem;
   font-weight:500;
   display:inline-block;
   border-bottom:1px solid var(--ink);
@@ -789,7 +792,7 @@ dl>div {
   gap:20px;
   padding:22px 0;
   border-bottom:1px solid var(--line);
-  font-size:11px;
+  font-size:.9375rem;
   line-height:1.8
 }
 dt {
@@ -840,7 +843,7 @@ dd {
   gap:30px
 }
 .contact-bottom p {
-  font-size:12px;
+  font-size:1rem;
   color:#d1d8ca
 }
 .button-light {
@@ -855,7 +858,7 @@ dd {
   justify-content:space-between;
   gap:20px;
   padding:26px 0;
-  font-size:9px;
+  font-size:.75rem;
   color:var(--muted)
 }
 .site-footer a span {
@@ -889,9 +892,6 @@ dd {
   .hero h1 {
     letter-spacing:-3px
   }
-  .hero-description {
-    font-size:14px
-  }
   .feature-content {
     padding:30px 29px 16px
   }
@@ -899,7 +899,8 @@ dd {
     font-size:35px
   }
   .project-grid {
-    gap:22px
+    gap:28px;
+    grid-template-columns:repeat(2,minmax(0,1fr))
   }
   .academic-layout {
     gap:65px
@@ -940,7 +941,7 @@ dd {
     letter-spacing:-2px
   }
   .hero .eyebrow {
-    font-size:8px;
+    font-size:.6875rem;
     letter-spacing:1px;
     max-width:310px
   }
@@ -969,9 +970,6 @@ dd {
   .label-people {
     right:-2px
   }
-  .hero-description {
-    font-size:12px
-  }
   .hero-footer {
     margin-top:12px
   }
@@ -992,9 +990,6 @@ dd {
   }
   .feature-content h3 {
     font-size:29px
-  }
-  .feature-content>p:not(.project-context):not(.metric-note) {
-    font-size:11px
   }
   .metric-row strong {
     font-size:26px
@@ -1071,8 +1066,8 @@ dd {
     height:76px
   }
   .site-header nav {
-    gap:23px;
-    font-size:11px
+    gap:18px;
+    font-size:.8125rem
   }
   .wordmark {
     font-size:33px
@@ -1088,7 +1083,7 @@ dd {
     letter-spacing:-2.8px
   }
   .hero .eyebrow {
-    font-size:8px;
+    font-size:.6875rem;
     max-width:none;
     letter-spacing:1.1px
   }
@@ -1096,11 +1091,9 @@ dd {
     font-size:35px
   }
   .hero-description {
-    font-size:13px;
     max-width:345px
   }
   .button {
-    font-size:11px;
     padding:13px 19px
   }
   .field-notes {
@@ -1141,11 +1134,10 @@ dd {
     margin-top:0
   }
   .hero-footer>span {
-    font-size:10px;
-    max-width:170px
+    max-width:180px
   }
   .hero-footer a {
-    font-size:7px;
+    font-size:.6875rem;
     letter-spacing:.7px;
     white-space:nowrap
   }
@@ -1163,14 +1155,12 @@ dd {
     font-size:43px
   }
   .section-heading>p {
-    font-size:12px;
     margin-top:20px
   }
   .section-heading>p br {
     display:none
   }
   .eyebrow {
-    font-size:8px;
     letter-spacing:1.3px
   }
   .work-toolbar {
@@ -1181,7 +1171,6 @@ dd {
     gap:2px
   }
   .filter {
-    font-size:10px;
     padding:8px 10px
   }
   .filter span {
@@ -1208,11 +1197,7 @@ dd {
   .feature-content h3 br {
     display:none
   }
-  .feature-content>p:not(.project-context):not(.metric-note) {
-    font-size:12px
-  }
   .project-context {
-    font-size:8px;
     letter-spacing:.8px
   }
   .metric-row {
@@ -1223,9 +1208,6 @@ dd {
   }
   .metric-row>div+div {
     padding-left:23px
-  }
-  .metric-row>div>span,.metric-note {
-    font-size:8px
   }
   .standard:last-child {
     display:block;
@@ -1243,24 +1225,11 @@ dd {
   .project-body h3 {
     font-size:30px
   }
-  .project-body>p:not(.project-context) {
-    font-size:13px
-  }
   .project-body .contribution {
     min-height:0
   }
-  .contribution strong {
-    font-size:11px
-  }
   .project-links {
-    font-size:11px;
     gap:20px
-  }
-  .detail-body {
-    font-size:12px
-  }
-  .tags li {
-    font-size:9px
   }
   .project-grid>.standard {
     border-bottom:1px solid var(--line);
@@ -1289,21 +1258,12 @@ dd {
     padding:24px 0;
     gap:20px
   }
-  .academic-list article>div>p:not(.project-context) {
-    font-size:12px
-  }
   .about-section {
     grid-template-columns:1fr;
     gap:43px
   }
   .about-copy h2 {
     font-size:43px
-  }
-  .about-copy .about-lead {
-    font-size:17px!important
-  }
-  .about-copy>p:not(.eyebrow) {
-    font-size:13px
   }
   dl>div {
     grid-template-columns:1fr 1.5fr;
@@ -1327,14 +1287,10 @@ dd {
   .contact-bottom {
     display:block
   }
-  .contact-bottom p {
-    font-size:12px
-  }
   .contact-bottom .button {
     margin-top:25px
   }
   .site-footer {
-    font-size:8px;
     display:grid;
     grid-template-columns:1fr auto;
     gap:10px;
