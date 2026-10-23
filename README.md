@@ -10,13 +10,14 @@ Personal portfolio for a UC Berkeley Data Science and Statistics student, with a
 - [AI Quiz and Video Generation](https://github.com/yhkimslv/quiz-generator) — collaborative Likelion × NAVER ZEP project for quiz generation, validation, and video workflows.
 - [VIVA](https://github.com/yhkimslv/viva) — collaborative Git desktop application with Honda Research Institute USA through 99P Labs.
 - [Gagyebu](https://github.com/yhkimslv/gagyebu) — independently developed personal and shared finance apps.
+- [Haunted Room Escape](https://yhkimslv.github.io/#course-cs61b) — a CS 61B course team project: a seeded Java game with procedural rooms and corridors, BFS click-to-walk navigation, undo/redo, and replay-based save/load.
 - Code Compass / RepoKnow — a Git-history and CodeQL repository-analysis CLI prototype. Source is private.
 - California Bicyclist Collisions — an interactive STAT 133 dashboard with an actual tab-switching walkthrough.
 - State of the Union — a STAT 133 text-analysis site, previewed through its rendered frequency and sentiment views.
 - Cook County Housing Models — collaborative DATA 100 A1/A2 exploration, regression modeling, and residual analysis.
 - Gamma-Ray Arrivals & Bootstrap Uncertainty — STAT 135 estimation and bootstrap analyses from Homework 3 and 4.
 
-The nine selected projects can be browsed by AI and machine learning, software and systems, data visualization, or statistical analysis. Selected coursework also remains in the course archive for context.
+The ten selected projects can be browsed by AI and machine learning, software and systems, data visualization, or statistical analysis. Selected coursework also remains in the course archive for context.
 
 ## Coursework archive
 

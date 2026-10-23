@@ -77,6 +77,20 @@
 .analysis-feature .study-note strong {
   font-weight: 600;
 }
+.game-feature {
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  background: #e5e9df;
+}
+.game-feature > .real-media {
+  padding: 24px;
+}
+.game-feature .media-launch {
+  background: #171b19;
+  border-color: #b9c5af;
+}
+.game-feature .feature-content {
+  padding: 30px 30px 24px 8px;
+}
 .project-grid .project[hidden] {
   display: none;
 }

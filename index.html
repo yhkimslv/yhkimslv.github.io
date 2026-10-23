@@ -58,15 +58,15 @@
         <div class="section-heading"><div><p class="eyebrow">01 / BUILDING & EXPERIMENTING</p><h2 id="work-title">Selected work<span class="accent">.</span></h2></div><p>Accessible AI, useful software, <br>visual stories, and statistical experiments.</p></div>
         <div class="work-toolbar">
           <div class="filters" role="group" aria-label="Filter projects">
-            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span data-filter-count>09</span></button>
+            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span data-filter-count>10</span></button>
             <button type="button" class="filter" data-filter="ml" data-filter-label="AI and machine learning" aria-pressed="false">AI &amp; machine learning <span data-filter-count>02</span></button>
-            <button type="button" class="filter" data-filter="software" data-filter-label="software and systems" aria-pressed="false">Software &amp; systems <span data-filter-count>03</span></button>
+            <button type="button" class="filter" data-filter="software" data-filter-label="software and systems" aria-pressed="false">Software &amp; systems <span data-filter-count>04</span></button>
             <button type="button" class="filter" data-filter="visualization" data-filter-label="data visualization" aria-pressed="false">Data visualization <span data-filter-count>02</span></button>
             <button type="button" class="filter" data-filter="statistics" data-filter-label="statistical analysis" aria-pressed="false">Statistical analysis <span data-filter-count>02</span></button>
           </div>
           <span class="toolbar-note" aria-hidden="true">IDEA → EXPERIMENT → APPLICATION</span>
         </div>
-        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 9 projects.</p>
+        <p id="filter-status" class="sr-only" aria-live="polite">Showing all 10 projects.</p>
         <div class="project-grid">
           <article class="project featured" data-category="ml" aria-labelledby="braille-title">
             <div class="feature-art media-feature">
@@ -122,6 +122,17 @@
               <figcaption><span class="recording-dot" aria-hidden="true"></span> SCREEN WALKTHROUGH <span>Sample data</span></figcaption>
             </figure>
             <div class="project-body"><p class="project-context">INDEPENDENT PROJECT</p><h3 id="ledger-title">Gagyebu</h3><p>Personal and shared finance apps for keeping track of daily spending, budgets, and who owes what.</p><p class="contribution"><strong>My focus</strong> Independently designing and developing My Ledger and Our Ledger across web and desktop.</p><ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>Electron</li><li>Supabase</li></ul><div class="project-links"><a href="https://github.com/yhkimslv/gagyebu">View code <span aria-hidden="true">↗</span></a><a href="https://piggybox.netlify.app">My Ledger <span aria-hidden="true">↗</span></a><a href="https://piggyduo.netlify.app">Our Ledger <span aria-hidden="true">↗</span></a></div><details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-body"><p>My Ledger supports income, expenses, budgets, recurring payments, savings goals, and payment balances. Our Ledger supports configurable expense splits and settlement balances.</p><p>Both support offline use, optional synchronization through a user-configured Supabase project, and English and Korean interfaces.</p><a href="https://github.com/yhkimslv/gagyebu-releases/releases">Desktop downloads ↗</a></div></details></div>
+          </article>
+
+          <article class="project analysis-feature game-feature" data-category="software" aria-labelledby="haunted-title">
+            <figure class="real-media">
+              <button class="media-launch" type="button" data-demo-type="gif" data-demo-src="assets/media/haunted-demo.gif" data-demo-poster="assets/media/haunted-poster.webp" data-demo-title="Haunted Room Escape in action" data-demo-description="Actual gameplay from our CS 61B Java game, starting in seed 42: preview a BFS route, walk through the generated rooms and corridors, and reach the exit's flower animation." aria-label="Enlarge the Haunted Room Escape game walkthrough">
+                <img src="assets/media/haunted-poster.webp" width="1280" height="800" loading="lazy" alt="Actual Haunted Room Escape game with a white heart avatar and a yellow BFS route through generated rooms">
+                <span class="media-action"><span class="play-symbol" aria-hidden="true">▶</span> View larger <span aria-hidden="true">↗</span></span>
+              </button>
+              <figcaption><span class="recording-dot" aria-hidden="true"></span> ACTUAL GAME WALKTHROUGH <span>Seeded Java world</span></figcaption>
+            </figure>
+            <div class="feature-content"><p class="project-context">CS 61B · COURSE TEAM PROJECT</p><h3 id="haunted-title">Haunted Room Escape</h3><p>A seeded Java exploration game with procedurally generated rooms and corridors, built with a course teammate.</p><p class="contribution"><strong>Project work</strong> Connected world generation, BFS click-to-walk navigation, and input history for undo, redo, and replay-based save/load.</p><ul class="tags" aria-label="Technologies"><li>Java</li><li>Procedural generation</li><li>BFS</li><li>Game development</li></ul><div class="project-links"><a href="#course-cs61b">Coursework context <span aria-hidden="true">↘</span></a></div><details><summary>Inside the game <span aria-hidden="true">+</span></summary><div class="detail-body"><p>A seed determines the room and corridor layout. Clicking a destination uses breadth-first search to find a walkable route through the world.</p><p>Input history supports undo and redo, while save/load reconstructs game state by replaying recorded actions.</p></div></details></div>
           </article>
 
           <article class="project standard" data-category="visualization" aria-labelledby="bicyclist-title">

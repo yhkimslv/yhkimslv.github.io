@@ -39,6 +39,13 @@ All displayed project media comes from real app interfaces or the project's own 
 - Source revision: `877e3944cafb4855490c1c3e2035d6f53cad30ed` of https://github.com/yhkimslv/gagyebu
 - Captured on October 22, 2026.
 
+## Haunted Room Escape
+
+- `haunted-demo.gif`: actual native Java game captures from the CS 61B course team project. Seed 42 generates the world; the sequence previews a yellow BFS route, walks to that destination, previews the exit route, and reaches the flower animation.
+- `haunted-poster.webp`: the first BFS route preview. Frames are cropped around the played area for legibility; native window chrome, HUD, recording indicator, and the pointer parked in the HUD are outside the crop. No game pixels were reconstructed or painted over.
+- Source revision: `bb320ec0a932bf4f794d0cef13bbd533262dc34d` of the private course repository. The original course checkout was not changed. A temporary capture build changes only the startup call from the menu to `newGame(42L)`; world generation, pathfinding, movement, rendering, and exit behavior are the original implementation.
+- Captured by interacting with the running game on October 22, 2026. 16 frames, 1280 × 800, 7.2 seconds, looping. Every decoded frame was checked for recording indicators and pointer overlays. Only GIF/poster output is published; the course solution and capture build remain private.
+
 ## California Bicyclist Collisions
 
 - `bicyclist-demo.gif`: five actual screenshots of the authored STAT 133 Project 4 rendered dashboard, captured by switching its Day-Hour, Collision Type, and Long-term Trends tabs.
